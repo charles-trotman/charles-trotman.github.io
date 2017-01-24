@@ -1,45 +1,64 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Get started with MapView - Create a 2D map</title>
-    <style>
-        html, body, #viewDiv {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
+<title>Charles Trotman</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<style>
+	body {
+		font-family: "Raleway", Arial, sans-serif
+	}
+	
+	.w3-row img {
+		margin-bottom: -8px
+	}
+</style>
 
-        #viewDiv {
-            border: solid 2px #0094ff;
-            height: 50%;
-        }
-    </style>
-    <link rel="stylesheet" href="https://js.arcgis.com/4.2/esri/css/main.css">
-    <script src="https://js.arcgis.com/4.2/"></script>
-    <script>
-        require([
-          "esri/Map",
-          "esri/views/MapView",
-          "dojo/domReady!"
-        ], function (Map, MapView) {
-            var map = new Map({
-                basemap: "streets"
-            });
-            var view = new MapView({
-                container: "viewDiv",  // Reference to the scene div created in step 5
-                map: map,  // Reference to the map object created before the scene
-                zoom: 16,  // Sets the zoom level based on level of detail (LOD)
-                center: [-3.517436, 55.862028]  // Sets the center point of view in lon/lat
-            });
-        });
-    </script>
-</head>
 <body>
-    <div><h>Where Craig Lives</h></div>
-    <div id="viewDiv" class="bordered"></div>
-    <div><p>The End</p></div>
+
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-content" style="max-width:1500px">
+
+		<!-- Header -->
+		<header class="w3-container w3-xlarge w3-padding-24">
+			<a href="#" class="w3-left w3-btn w3-white">Charles Trotman</a>
+			<a href="#about" class="w3-right w3-btn w3-white">About</a>
+		</header>
+
+		<!-- Photo Grid -->
+		<div class="w3-row">
+			<div class="w3-half">
+				<img src="DSC_0273.jpg" style="width:100%">
+			</div>
+			<div class="w3-half">
+				<img src="DSC_0280.jpg" style="width:100%">
+			</div>
+		</div>
+		<div class="w3-row">
+			<div class="w3-third">
+				<img src="DSC_0203.jpg" style="width:100%">
+			</div>
+			<div class="w3-third">
+				<img src="DSC_0075.jpg" style="width:100%">
+			</div>
+			<div class="w3-third">
+				<img src="DSC_0022.JPG" style="width:100%">
+			</div>
+		</div>
+
+		<!-- End Page Content -->
+	</div>
+
+	<!-- Footer / About Section -->
+	<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+		<h2>About</h2>
+		<h3>Charles Trotman</h3>
+		<img src="http://www.digimap.gg/wp-content/uploads/2016/01/Charles.jpg" class="w3-image" width="150" height="150">
+		<br>
+		<p>A software developer who is currently living and working on the beautiful island of Guernsey.</p>
+		<p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+	</footer>
+
 </body>
 </html>

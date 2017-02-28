@@ -65,19 +65,21 @@
 					</a>
 				</div>
 			</div>
-			<script src= "http://player.twitch.tv/js/embed/v1.js"></script>
-<div id="player"></div>
-<script type="text/javascript">
-    var options = {
-        width: 854,
-        height: 480,
-        channel: "conniecat", 
-        //video: "{VIDEO_ID}"       
-    };
-    var player = new Twitch.Player("player", options);
-    player.setVolume(0.5);
-    player.addEventListener(Twitch.Player.PAUSE, () => { console.log('Player is paused!'); });
-</script>
+			<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+			<div id="player"></div>
+			<script type="text/javascript">
+				var options = {
+					width: 854,
+					height: 480,
+					channel: "conniecat",
+					//video: "{VIDEO_ID}"       
+				};
+				var player = new Twitch.Player("player", options);
+				player.setVolume(0.5);
+				player.addEventListener(Twitch.Player.PAUSE, () => {
+					console.log('Player is paused!');
+				});
+			</script>
 			<div id="player" class="w3-center"></div>
 		</div>
 	</div>

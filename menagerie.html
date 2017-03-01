@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
-<title>Team Menagerie</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="menagerie-style.css" />
-<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
-
+<head>
+	<title>Team Menagerie</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="menagerie-style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+	<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+	<script type="text/javascript" defer>
+		var options = {
+			width: 854,
+			height: 480,
+			channel: "conniecat"
+		};
+		var player = new Twitch.Player("player", options);
+		player.setVolume(0.5);
+		player.addEventListener(Twitch.Player.PAUSE, () => {
+			console.log('Player is paused!');
+		});
+	</script>
+</head>
 <body class="w3-black">
 	<!-- Sidenav with image -->
 	<nav class="w3-sidenav w3-hide-medium w3-hide-small" style="width:40%">
@@ -65,24 +79,8 @@
 					</a>
 				</div>
 			</div>
-			<script src="https://player.twitch.tv/js/embed/v1.js"></script>
-			<div id="player"></div>
-			<script type="text/javascript">
-				var options = {
-					width: 854,
-					height: 480,
-					channel: "conniecat",
-					//video: "{VIDEO_ID}"       
-				};
-				var player = new Twitch.Player("player", options);
-				player.setVolume(0.5);
-				player.addEventListener(Twitch.Player.PAUSE, () => {
-					console.log('Player is paused!');
-				});
-			</script>
 			<div id="player" class="w3-center"></div>
 		</div>
 	</div>
 </body>
-
 </html>

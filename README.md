@@ -1,2 +1,11 @@
-# charles-trotman.github.io
-Hello
+# Welcome!
+
+Find some blog posts here:
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
